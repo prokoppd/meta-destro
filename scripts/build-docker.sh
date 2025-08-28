@@ -15,6 +15,9 @@ else
     exit 1
 fi
 
+# Show which tool is being used
+echo "Using container tool: $CONTAINER_TOOL"
+
 # Build the Docker image
 $CONTAINER_TOOL build -t $IMAGE_NAME .
 echo "Docker image '$IMAGE_NAME' built successfully using $CONTAINER_TOOL."
